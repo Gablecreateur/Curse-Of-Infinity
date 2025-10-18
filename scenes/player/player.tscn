@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3mj7npc63n3p"]
+
+[ext_resource type="Texture2D" uid="uid://b1ynjlw2plfg3" path="res://assets/textures/player/Body.png" id="1_p47bc"]
+[ext_resource type="Texture2D" uid="uid://crloajhrfv0fw" path="res://assets/textures/player/Left Eye.png" id="2_75vfm"]
+[ext_resource type="Texture2D" uid="uid://cfxs464b7362g" path="res://assets/textures/player/Left Iris.png" id="3_0owmy"]
+[ext_resource type="Texture2D" uid="uid://g7joq16nnpgd" path="res://assets/textures/player/Right Eye.png" id="4_qek5x"]
+[ext_resource type="Texture2D" uid="uid://b1spcrso1vuje" path="res://assets/textures/player/Right Iris.png" id="5_5gtgg"]
+[ext_resource type="Script" uid="uid://bayuf3wwqnkdw" path="res://script/player/no_curse.gd" id="6_75vfm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h17s1"]
+size = Vector2(256, 256)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="BodySprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_p47bc")
+
+[node name="LeftEyeSprite" type="Sprite2D" parent="BodySprite2D"]
+position = Vector2(-56, -8)
+texture = ExtResource("2_75vfm")
+
+[node name="LeftIrisSprite" type="Sprite2D" parent="BodySprite2D/LeftEyeSprite"]
+position = Vector2(8, 0)
+texture = ExtResource("3_0owmy")
+
+[node name="RightEyeSprite" type="Sprite2D" parent="BodySprite2D"]
+position = Vector2(56, -8)
+texture = ExtResource("4_qek5x")
+
+[node name="RightIrisSprite" type="Sprite2D" parent="BodySprite2D/RightEyeSprite"]
+position = Vector2(8, 0)
+texture = ExtResource("5_5gtgg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_h17s1")
+
+[node name="CurseManager" type="Node" parent="."]
+
+[node name="NoCurse" type="Node" parent="CurseManager"]
+script = ExtResource("6_75vfm")

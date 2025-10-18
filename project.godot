@@ -14,6 +14,17 @@ config/name="Curse of Infinity"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Game="*res://script/game_autoload.gd"
+
+[file_customization]
+
+folder_colors={
+"res://scenes/": "red",
+"res://script/": "blue"
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
