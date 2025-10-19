@@ -18,7 +18,7 @@ var target : Array[TARGETS]
 func start() -> void:
 	pass
 
-func _run() -> void:
+func run(delta : float) -> void:
 	pass
 
 func end() -> void:

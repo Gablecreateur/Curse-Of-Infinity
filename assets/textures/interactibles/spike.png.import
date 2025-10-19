@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ynjlw2plfg3"
-path="res://.godot/imported/Body.png-3286fdaaeb0016cea4643d94d79bbf57.ctex"
+uid="uid://dl0cbuo2h37ia"
+path="res://.godot/imported/spike.png-4d06a88bdf62aec553938895d3b5f949.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/player/Body.png"
-dest_files=["res://.godot/imported/Body.png-3286fdaaeb0016cea4643d94d79bbf57.ctex"]
+source_file="res://assets/textures/interactibles/spike.png"
+dest_files=["res://.godot/imported/spike.png-4d06a88bdf62aec553938895d3b5f949.ctex"]
 
 [params]
 

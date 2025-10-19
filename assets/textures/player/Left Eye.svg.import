@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfxs464b7362g"
-path="res://.godot/imported/Left Iris.png-6336525762a216ad84771f83a7b3852c.ctex"
+uid="uid://l7sp11823ujl"
+path="res://.godot/imported/Left Eye.svg-297eb4d964b02a43a11bb9cde8f5a0f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/player/Left Iris.png"
-dest_files=["res://.godot/imported/Left Iris.png-6336525762a216ad84771f83a7b3852c.ctex"]
+source_file="res://assets/textures/player/Left Eye.svg"
+dest_files=["res://.godot/imported/Left Eye.svg-297eb4d964b02a43a11bb9cde8f5a0f2.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

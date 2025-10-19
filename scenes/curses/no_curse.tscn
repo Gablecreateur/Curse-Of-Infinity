@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://2y0x0yaqtb4l"]
+
+[ext_resource type="Script" uid="uid://bayuf3wwqnkdw" path="res://script/player/curses/no_curse.gd" id="1_1qad2"]
+
+[node name="NoCurse" type="Node"]
+script = ExtResource("1_1qad2")
+player_speed = 150.0
+jump_height = 13.0

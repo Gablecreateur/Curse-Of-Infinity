@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://fq1ybqxa1w4q"]
+
+[ext_resource type="Script" uid="uid://cxiilkmy3gywq" path="res://script/player/curse_manager.gd" id="1_k6fj5"]
+[ext_resource type="PackedScene" uid="uid://2y0x0yaqtb4l" path="res://scenes/curses/no_curse.tscn" id="2_278vk"]
+
+[node name="CurseManager" type="Node"]
+script = ExtResource("1_k6fj5")
+
+[node name="NoCurse" parent="." instance=ExtResource("2_278vk")]
+player_speed = 100.0
+jump_height = 10000.0
