@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3mj7npc63n3p"]
+[gd_scene load_steps=9 format=3 uid="uid://d3mj7npc63n3p"]
 
 [ext_resource type="Texture2D" uid="uid://cxpu53d5sc82f" path="res://assets/textures/player/Body.svg" id="1_p47bc"]
 [ext_resource type="Texture2D" uid="uid://l7sp11823ujl" path="res://assets/textures/player/Left Eye.svg" id="2_75vfm"]
 [ext_resource type="Texture2D" uid="uid://bq3igb272xxto" path="res://assets/textures/player/Left Iris.svg" id="3_0owmy"]
 [ext_resource type="Texture2D" uid="uid://dyhen8m2tmlyj" path="res://assets/textures/player/Right Eye.svg" id="4_qek5x"]
 [ext_resource type="Texture2D" uid="uid://xff60ope8h2" path="res://assets/textures/player/Right Iris.svg" id="5_5gtgg"]
+[ext_resource type="Script" uid="uid://6b6rdhc5gb2e" path="res://script/player/hurtbox.gd" id="6_75vfm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h17s1"]
-size = Vector2(256, 256)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0owmy"]
+size = Vector2(208, 208)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_75vfm"]
+radius = 128.24976
 
 [node name="Player" type="CharacterBody2D"]
 
@@ -30,5 +34,15 @@ texture = ExtResource("4_qek5x")
 position = Vector2(8, 0)
 texture = ExtResource("5_5gtgg")
 
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("6_75vfm")
+metadata/_custom_type_script = "uid://6b6rdhc5gb2e"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("RectangleShape2D_0owmy")
+debug_color = Color(0, 0.7411765, 0, 0.41960785)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_h17s1")
+shape = SubResource("CircleShape2D_75vfm")

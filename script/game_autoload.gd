@@ -7,6 +7,7 @@ var player : CharacterBody2D
 var base_level : Node2D
 var current_level : Node2D
 
+var player_default_behavior : Callable
 var curse_manager : CurseManager
 var default_curse : Curse
 var active_curse_array : Array[Curse]
@@ -26,7 +27,6 @@ func _ready() -> void:
 	curse_manager = load_and_add_to_tree(self,"res://scenes/game/curse_manager.tscn")
 	default_curse = curse_manager.loaded_curse_dict[&"no_curse"]
 	player = load_and_add_to_tree(self,"res://scenes/player/player.tscn")
-	print(player)
 
 func _physics_process(delta: float) -> void:
 	default_curse.run(delta)
