@@ -9,6 +9,10 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == Game.player:
-		IsActivated = true
-		activated.emit()
-		$TopSprite2D.visible = false
+		push_button()
+
+
+func push_button() -> void:
+	IsActivated = true
+	activated.emit()
+	$TopSprite2D.visible = false

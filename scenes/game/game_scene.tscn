@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlr321q2ny3aw"]
+
+[ext_resource type="Script" uid="uid://6tqr5y1hcg3m" path="res://script/levels/level_loader.gd" id="1_omorx"]
+[ext_resource type="PackedScene" uid="uid://dmgtms7owhvvh" path="res://scenes/levels/orignal_level.tscn" id="2_ydf3n"]
+
+[node name="Game" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
+texture_filter = 2
+zoom = Vector2(4, 4)
+
+[node name="2Dparent" type="Node2D" parent="."]
+script = ExtResource("1_omorx")
+
+[node name="Original Level" parent="2Dparent" instance=ExtResource("2_ydf3n")]

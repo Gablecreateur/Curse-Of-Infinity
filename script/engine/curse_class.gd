@@ -2,18 +2,25 @@ extends Node
 class_name Curse
 
 enum TARGETS {
-	PLAYER_MOUVEMENT,
+	PLAYER_MOUVEMENT_MODIFIER,
+	PLAYER_MOUVEMENT_OVERHAUL,
 	PLAYER_APPEARENCE,
-	LEVEL_GAMEPLAY,
-	LEVEL_APPEARENCE,
 	LEVEL_SCENE
 }
 
-var curse_name : String
-var level_duration : int
-var id : StringName
+@export var curse_name : String
+@export var level_duration : int
+@export var id : StringName
+@export var level_node : Level
+var level_scene : PackedScene
 
-var target : Array[TARGETS]
+@export var tags : Array[TARGETS]
+
+func _ready() -> void:
+	if level_node != null:
+		level_scene = PackedScene.new()
+		level_scene.pack(level_node.duplicate())
+		
 
 func start() -> void:
 	pass

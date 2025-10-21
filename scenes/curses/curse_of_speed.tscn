@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dox0gsh3wo73k"]
+
+[ext_resource type="Script" uid="uid://dvhdb5kjbcx66" path="res://script/player/curses/curse_of_speed.gd" id="1_1gc36"]
+
+[node name="CurseOfSpeed" type="Node"]
+script = ExtResource("1_1gc36")
+id = &"curse_of_speed"
+metadata/_custom_type_script = "uid://duvopqwkti83q"

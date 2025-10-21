@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjnq1nuh38rej"]
+
+[ext_resource type="Texture2D" uid="uid://blwlyowpudo0w" path="res://assets/textures/interactibles/semisolid.png" id="1_3m6ne"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_es1cy"]
+a = Vector2(8, -8)
+b = Vector2(-8, -8)
+
+[node name="Semisolid" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3m6ne")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_es1cy")
+one_way_collision = true

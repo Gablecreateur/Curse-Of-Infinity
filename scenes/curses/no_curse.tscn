@@ -5,4 +5,6 @@
 [node name="NoCurse" type="Node"]
 script = ExtResource("1_1qad2")
 player_speed = 150.0
-jump_height = 13.0
+jump_height = 15.0
+curse_name = "No Curse"
+id = &"no_curse"

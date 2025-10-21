@@ -1,38 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3mj7npc63n3p"]
+[gd_scene load_steps=6 format=3 uid="uid://d3mj7npc63n3p"]
 
-[ext_resource type="Texture2D" uid="uid://cxpu53d5sc82f" path="res://assets/textures/player/Body.svg" id="1_p47bc"]
-[ext_resource type="Texture2D" uid="uid://l7sp11823ujl" path="res://assets/textures/player/Left Eye.svg" id="2_75vfm"]
-[ext_resource type="Texture2D" uid="uid://bq3igb272xxto" path="res://assets/textures/player/Left Iris.svg" id="3_0owmy"]
-[ext_resource type="Texture2D" uid="uid://dyhen8m2tmlyj" path="res://assets/textures/player/Right Eye.svg" id="4_qek5x"]
-[ext_resource type="Texture2D" uid="uid://xff60ope8h2" path="res://assets/textures/player/Right Iris.svg" id="5_5gtgg"]
+[ext_resource type="Script" uid="uid://0f7w55kbdnw8" path="res://script/player/player.gd" id="1_0owmy"]
+[ext_resource type="Texture2D" uid="uid://dg2koopbc0dio" path="res://assets/textures/player/player.png" id="2_gmlin"]
 [ext_resource type="Script" uid="uid://6b6rdhc5gb2e" path="res://script/player/hurtbox.gd" id="6_75vfm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0owmy"]
-size = Vector2(208, 208)
+size = Vector2(16, 16)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_75vfm"]
-radius = 128.24976
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmlin"]
+radius = 8.0
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_0owmy")
 
 [node name="BodySprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_p47bc")
-
-[node name="LeftEyeSprite" type="Sprite2D" parent="BodySprite2D"]
-position = Vector2(-56, -8)
-texture = ExtResource("2_75vfm")
-
-[node name="LeftIrisSprite" type="Sprite2D" parent="BodySprite2D/LeftEyeSprite"]
-position = Vector2(8, 0)
-texture = ExtResource("3_0owmy")
-
-[node name="RightEyeSprite" type="Sprite2D" parent="BodySprite2D"]
-position = Vector2(56, -8)
-texture = ExtResource("4_qek5x")
-
-[node name="RightIrisSprite" type="Sprite2D" parent="BodySprite2D/RightEyeSprite"]
-position = Vector2(8, 0)
-texture = ExtResource("5_5gtgg")
+z_index = 1
+texture = ExtResource("2_gmlin")
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 2
@@ -45,4 +28,6 @@ shape = SubResource("RectangleShape2D_0owmy")
 debug_color = Color(0, 0.7411765, 0, 0.41960785)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_75vfm")
+z_index = 1
+rotation = 1.5707964
+shape = SubResource("CircleShape2D_gmlin")
