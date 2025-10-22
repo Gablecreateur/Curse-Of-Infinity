@@ -6,6 +6,7 @@ var jump_height : float = 15.0
 
 signal jumped
 
+@onready var hurtbox : Hurtbox = $Hurtbox
 var default_speed : float
 var default_jump_height : float
 

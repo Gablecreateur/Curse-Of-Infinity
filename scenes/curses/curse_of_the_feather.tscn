@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://30prwh4n25k2"]
+
+[ext_resource type="Script" uid="uid://cdw68kkab81ba" path="res://script/player/curses/curse_of_the_feather.gd" id="1_wwqnh"]
+
+[node name="CurseOfTheFeather" type="Node"]
+script = ExtResource("1_wwqnh")
+curse_name = "Curse Of The Feather"
+id = &"curse_of_the_feather"
+tags = Array[int]([0])
+metadata/_custom_type_script = "uid://duvopqwkti83q"

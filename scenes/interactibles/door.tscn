@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://co40igd0mfjup" path="res://assets/textures/interactibles/door_locked.png" id="2_amque"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mt6s6"]
-size = Vector2(25, 8)
+size = Vector2(14, 8)
 
 [node name="Door" type="Node2D"]
 script = ExtResource("1_amque")
@@ -23,3 +23,5 @@ texture = ExtResource("2_amque")
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_mt6s6")
 debug_color = Color(0, 0.30588236, 0.69803923, 0.41960785)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

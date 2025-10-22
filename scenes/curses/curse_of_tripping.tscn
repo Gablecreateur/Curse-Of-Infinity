@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbn8yhp0mngl"]
+
+[ext_resource type="Script" uid="uid://dgfx5osx8svqn" path="res://script/player/curses/curse_of_tripping.gd" id="1_ltnku"]
+
+[node name="CurseOfTripping" type="Node"]
+script = ExtResource("1_ltnku")
+curse_name = "Curse Of Tripping"
+id = &"curse_of_tripping"
+tags = Array[int]([1])
+metadata/_custom_type_script = "uid://duvopqwkti83q"

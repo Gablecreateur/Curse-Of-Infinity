@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvvluoaxob4em"]
+
+[ext_resource type="Script" uid="uid://b7ui1g4uvpaau" path="res://script/player/curses/curse_of_diving.gd" id="1_iqvkw"]
+
+[node name="CurseOfDiving" type="Node"]
+script = ExtResource("1_iqvkw")
+curse_name = "Curse Of Diving"
+id = &"curse_of_diving"
+tags = Array[int]([1])
+metadata/_custom_type_script = "uid://duvopqwkti83q"

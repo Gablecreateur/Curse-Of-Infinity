@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv2r3v0xuwkfy"]
+
+[ext_resource type="Script" uid="uid://dxhtrwunqw2cb" path="res://script/player/curses/curse_of_the_bishop.gd" id="1_ow74o"]
+
+[node name="CurseOfTheBishop" type="Node"]
+script = ExtResource("1_ow74o")
+curse_name = "Curse Of The Bishop"
+id = &"curse_of_the_bishop"
+tags = Array[int]([1])
+metadata/_custom_type_script = "uid://duvopqwkti83q"

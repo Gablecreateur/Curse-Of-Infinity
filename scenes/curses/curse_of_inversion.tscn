@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvgwunpey4ub1"]
+
+[ext_resource type="Script" uid="uid://mpiprbyre5ue" path="res://script/player/curses/curse_of_inversion.gd" id="1_qiobv"]
+
+[node name="CurseOfInversion" type="Node"]
+script = ExtResource("1_qiobv")
+curse_name = "Curse of Iversion"
+id = &"curse_of_inversion"
+tags = Array[int]([0])
+metadata/_custom_type_script = "uid://duvopqwkti83q"

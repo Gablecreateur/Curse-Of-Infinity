@@ -1,7 +1,7 @@
 extends Node
 
 const ACCELERATION : float = 25
-const GRAVITY : float = 50
+var GRAVITY : float = 50
 
 var player : Player
 var base_level : Node2D
@@ -9,16 +9,19 @@ var current_level : Level
 var level_parent : Node2D
 var active_checkpoint : Node2D
 var level_loader : Node2D
+var hud_parent : Control
 
 var player_default_behavior : Callable
 var curse_manager : CurseManager
 var default_curse : Curse
 var active_curse_array : Array[Curse]
 var total_curse_dict : Dictionary[StringName,Curse]
+var curse_id_array : Array[String]
 
 var level_modifier : Curse
 var gameplay_modifier : Curse
 var appearence_modifier : Curse
+var curse_chooser_hud : Control
 
 var gravity : Vector2 = Vector2(0,1)
 const DEFAULT_GRAVITY : Vector2 = Vector2(0,1)
@@ -34,17 +37,18 @@ func _ready() -> void:
 	default_curse = curse_manager.loaded_curse_dict[&"no_curse"]
 	player = load_and_add_to_tree(self,"res://scenes/player/player.tscn")
 	
+	
 	curse_manager.load_curse(&"no_curse")
 	curse_manager.add_curse_to_player(&"no_curse")
-	
-	curse_manager.load_curse(&"curse_of_mass")
-	curse_manager.add_curse_to_player(&"curse_of_mass")
 
 func _physics_process(delta: float) -> void:
 	
 
 	for curse in active_curse_array:
 		curse.run(delta)
+
+func end_level() -> void:
+	curse_chooser_hud.curse_selection()
 
 func start_level() -> void:
 	
@@ -61,6 +65,21 @@ func start_level() -> void:
 			level_parent.add_child(current_level)
 			current_level.set_checkpoint()
 			active_checkpoint = current_level.checkpoint
+			
+		else:
+			
+			level_modifier = null
+			var original_level_scene : PackedScene = load("res://scenes/levels/orignal_level.tscn")
+			current_level = original_level_scene.instantiate()
+			for child in level_parent.get_children():
+				if child is Level:
+					child.queue_free()
+			
+			level_parent.add_child(current_level)
+			active_checkpoint = current_level.checkpoint
+		
+		
+		
 		
 		if curse.tags.has(Curse.TARGETS.PLAYER_APPEARENCE):
 			appearence_modifier = curse
@@ -72,6 +91,4 @@ func start_level() -> void:
 
 
 func start_round() -> void:
-	print("Active checkpoint :")
-	print(Game.active_checkpoint)
-	#Game.player.position = Game.active_checkpoint.position
+	Game.player.position = Game.active_checkpoint.position

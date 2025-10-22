@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwk3kskixinbp"]
+
+[ext_resource type="Theme" uid="uid://c2ky7qq8yc6yi" path="res://assets/themes/main_theme.tres" id="1_7hc1b"]
+[ext_resource type="Script" uid="uid://dpn10e02ta8tm" path="res://script/HUD/curse_chooser.gd" id="1_gti2v"]
+
+[node name="Curse Chooser" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7hc1b")
+script = ExtResource("1_gti2v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7hc1b")
+alignment = 1

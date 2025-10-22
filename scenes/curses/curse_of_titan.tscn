@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b34oty4mb8u47"]
+
+[ext_resource type="Script" uid="uid://c1w2achqisbe0" path="res://script/player/curses/curse_of_titan.gd" id="1_b1ku2"]
+
+[node name="CurseOfTitan" type="Node"]
+script = ExtResource("1_b1ku2")
+curse_name = "Curse Of Titan"
+id = &"curse_of_titan"
+tags = Array[int]([2])
+metadata/_custom_type_script = "uid://duvopqwkti83q"

@@ -9,7 +9,7 @@ enum TARGETS {
 }
 
 @export var curse_name : String
-@export var level_duration : int
+@export var level_duration : int = 1
 @export var id : StringName
 @export var level_node : Level
 var level_scene : PackedScene
