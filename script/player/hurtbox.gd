@@ -27,8 +27,6 @@ func _on_area_entered(area: Area2D) -> void:
 func die() -> void:
 
 	if owner is Player:
-		owner.position = Game.active_checkpoint.position
-		health = max_health
 		Game.start_round()
 		died.emit()
 	

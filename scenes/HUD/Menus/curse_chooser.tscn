@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dpn10e02ta8tm" path="res://script/HUD/curse_chooser.gd" id="1_gti2v"]
 
 [node name="Curse Chooser" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

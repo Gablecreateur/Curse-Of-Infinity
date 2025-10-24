@@ -4,5 +4,6 @@
 
 [node name="CurseOfSpeed" type="Node"]
 script = ExtResource("1_1gc36")
+curse_name = "Curse Of Speed"
 id = &"curse_of_speed"
 metadata/_custom_type_script = "uid://duvopqwkti83q"

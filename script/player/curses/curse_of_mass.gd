@@ -3,20 +3,26 @@ extends Curse
 var ceiling_damage : int = 0
 var is_brocken : bool = false
 
+func _ready() -> void:
+	level_scene = load("res://scenes/levels/curse_of_mass_level.tscn")
+
 func start() -> void:
-	Game.player.speed *= 0.125
+	Game.player.speed = 20
 	Game.player.jump_height = 8
 	Game.player.connect("jumped",break_ceilling)
+	Game.base_level.visible = false
 
 func run(delta : float) -> void:
 	
 	Game.player_default_behavior.call(delta)
 	
-	
 	Game.player.move_and_slide()
 
 func end() -> void:
 	Game.player.speed = Game.player.default_speed
+	Game.base_level.visible = true
+	Game.current_level.visible = true
+	$Level.visible = false
 
 func break_ceilling() -> void:
 	if not is_brocken:

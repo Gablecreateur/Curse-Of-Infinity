@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://4l6s4guv8q4k"]
+
+[ext_resource type="Script" uid="uid://do16idihaq54v" path="res://script/player/curses/curse_of_zoom.gd" id="1_pa8y5"]
+
+[node name="CurseOfZoom" type="Node"]
+script = ExtResource("1_pa8y5")
+curse_name = "Curse of Zoom"
+id = &"curse_of_zoom"
+tags = Array[int]([2])
+metadata/_custom_type_script = "uid://duvopqwkti83q"

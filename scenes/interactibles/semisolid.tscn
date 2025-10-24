@@ -2,17 +2,19 @@
 
 [ext_resource type="Texture2D" uid="uid://blwlyowpudo0w" path="res://assets/textures/interactibles/semisolid.png" id="1_3m6ne"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_es1cy"]
-a = Vector2(8, -8)
-b = Vector2(-8, -8)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m6ne"]
+size = Vector2(16, 6)
 
 [node name="Semisolid" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 5)
 texture = ExtResource("1_3m6ne")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("SegmentShape2D_es1cy")
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_3m6ne")
 one_way_collision = true

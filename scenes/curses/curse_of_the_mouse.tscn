@@ -5,6 +5,6 @@
 [node name="CurseOfTheMouse" type="Node"]
 script = ExtResource("1_5cj05")
 curse_name = "Curse Of The Mouse"
-id = &"course_of_the_mouse"
+id = &"curse_of_the_mouse"
 tags = Array[int]([2])
 metadata/_custom_type_script = "uid://duvopqwkti83q"

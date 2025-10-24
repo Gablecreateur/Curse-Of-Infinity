@@ -13,6 +13,7 @@ func run(delta : float) -> void:
 	Game.player.move_and_slide()
 
 func end() -> void:
+	Game.player.jumped.disconnect(switch_gravity)
 	Game.GRAVITY = 50
 
 func switch_gravity() -> void:
